@@ -113,22 +113,22 @@ em {
     height: 40px;
     display: block;
     text-indent: -99999px;
-}
+   }
 
 .github {
-    background-image: url(../imagens/github.png);
+    background-image: url(../img/github.png);
 }
 
 .twitter {
-    background-image: url(../imagens/twitter.png);
+    background-image: url(../img/twitter.png);
 }
 
 .linkedin {
-    background-image: url(../imagens/linkedin.png);
+    background-image: url(../img/linkedin.png);
 }
 
 main {
-    width: 80%;
+    width: calc(100% - 0.9 * 300px);
     float: left;
     padding-bottom: 4em;
 }
@@ -141,7 +141,7 @@ main {
 }
 
 .navegacao-site {
-    width: 20%;
+    width: calc(0.9 * 300px);
     float: right;
     position: relative;
     top: 300px;
@@ -152,4 +152,33 @@ main {
     top: 0;
     right: 0;
     height: 300px;
+}
+
+.icones-redes-sociais a {
+    position: relative;
+}
+
+.icones-redes-sociais a:hover::after,
+.icones-redes-sociais a:focus::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    background: black;
+    color: white;
+    top: 100%;
+    width: 300%;
+    right: 0;
+    text-indent: 0;
+    font-size: .75em;
+}
+
+.icones-redes-sociais a:hover::before,
+.icones-redes-sociais a:focus::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 1em;
+    height: 1em;
+    background-color: black;    
+    transform: translateY(.5em) rotate(45deg);
 }
